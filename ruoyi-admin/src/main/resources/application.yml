@@ -36,6 +36,9 @@ logging:
   level:
     com.ruoyi: debug
     org.springframework: warn
+  file:
+    path: logs
+    name: logs/ruoyi
 
 # 用户配置
 user:
