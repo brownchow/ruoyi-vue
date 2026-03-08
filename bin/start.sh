@@ -4,8 +4,11 @@
 # 启动脚本 - 若依管理系统
 # =============================================================================
 
-# 应用名称
+# 应用名称（jar文件名）
 APP_NAME=ruoyi-admin-3.9.1
+
+# 日志文件名
+LOG_NAME=ruoyi
 
 # 获取脚本所在目录
 APP_HOME=$(cd "$(dirname "$0")" && pwd)
@@ -27,7 +30,7 @@ BASE_DIR=$(cd "$APP_HOME/.." && pwd)
 # -XX:SurvivorRatio=30: Eden区与Survivor区比例
 # -XX:+UseParallelGC: 使用Parallel垃圾收集器
 # -XX:+UseParallelOldGC: 使用Parallel Old垃圾收集器
-JVM_OPTS="-Dname=$APP_NAME -Duser.timezone=Asia/Shanghai -Xms512m -Xmx1024m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:NewRatio=1 -XX:SurvivorRatio=30 -XX:+UseParallelGC"
+JVM_OPTS="-Dname=$LOG_NAME -Duser.timezone=Asia/Shanghai -Xms512m -Xmx1024m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -XX:NewRatio=1 -XX:SurvivorRatio=30 -XX:+UseParallelGC"
 
 # 依赖库目录
 LIB_DIR=$BASE_DIR/lib
@@ -39,7 +42,7 @@ CONFIG_DIR=$BASE_DIR/config
 LOG_DIR=$BASE_DIR/logs
 
 # 日志文件路径
-LOG_FILE=$LOG_DIR/$APP_NAME.log
+LOG_FILE=$LOG_DIR/$LOG_NAME.log
 
 # 创建日志目录（如果不存在）
 if [ ! -d "$LOG_DIR" ]; then
