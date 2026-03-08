@@ -61,9 +61,21 @@
             <artifactId>ruoyi-generator</artifactId>
         </dependency>
 
-    </dependencies>
+</dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>application*.yml</exclude>
+                    <exclude>application*.yaml</exclude>
+                    <exclude>logback*.xml</exclude>
+                    <exclude>i18n/**</exclude>
+                    <exclude>mybatis/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
         <plugins>
 <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -72,18 +84,6 @@
                 <configuration>
                     <fork>true</fork>
                     <mainClass>com.ruoyi.RuoYiApplication</mainClass>
-                    <resources>
-                        <resource>
-                            <directory>src/main/resources</directory>
-                            <excludes>
-                                <exclude>application*.yml</exclude>
-                                <exclude>application*.yaml</exclude>
-                                <exclude>logback*.xml</exclude>
-                                <exclude>i18n/**</exclude>
-                                <exclude>mybatis/**</exclude>
-                            </excludes>
-                        </resource>
-                    </resources>
                 </configuration>
                 <executions>
                     <execution>
