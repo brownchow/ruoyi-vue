@@ -12,7 +12,7 @@ LIB_DIR=$BASE_DIR/lib
 CONFIG_DIR=$BASE_DIR/config
 LOG_DIR=$BASE_DIR/logs
 
-JAVA_OPTS="-Xms512m -Xmx1024m -Dname=$LOG_NAME"
+JAVA_OPTS="-Xms512m -Xmx1024m -Dname=$LOG_NAME -Dlogging.config=$CONFIG_DIR/logback.xml"
 
 mkdir -p "$LOG_DIR"
 
