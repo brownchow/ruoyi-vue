@@ -72,12 +72,11 @@
                     <exclude>application*.yaml</exclude>
                     <exclude>logback*.xml</exclude>
                     <exclude>i18n/**</exclude>
-                    <exclude>mybatis/**</exclude>
                 </excludes>
             </resource>
         </resources>
         <plugins>
-<plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.5.15</version>
