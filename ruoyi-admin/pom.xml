@@ -71,7 +71,6 @@
                     <exclude>application*.yml</exclude>
                     <exclude>application*.yaml</exclude>
                     <exclude>logback*.xml</exclude>
-                    <exclude>i18n/**</exclude>
                 </excludes>
             </resource>
         </resources>
